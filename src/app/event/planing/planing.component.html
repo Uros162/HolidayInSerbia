@@ -1,0 +1,51 @@
+
+<div fxLayoutAlign = "center center">
+    <mat-form-field fxFlex="35%">
+        <input matInput type="text" (keyup) = "doFilter($event.target.value)" placeholder="filter">
+    </mat-form-field>
+</div>
+
+<mat-table [dataSource] = "myeventsSource" matSort>
+    <ng-container matColumnDef = "eventName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Event</mat-header-cell>
+        <mat-cell *matCellDef = "let element"  (click)="getValue($event)">{{element.eventName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "startTime">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Start time</mat-header-cell>
+        <mat-cell *matCellDef = "let element">{{element.startTime}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "location">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Location</mat-header-cell>
+        <mat-cell *matCellDef = "let element">{{element.location}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "rate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Rate</mat-header-cell>
+        <mat-cell *matCellDef = "let element">{{element.rate}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "type">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
+        <mat-cell *matCellDef = "let element">{{element.type}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "attendance">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Attendance</mat-header-cell>
+        <mat-cell *matCellDef = "let element">{{element.attendance}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <mat-header-cell  *matHeaderCellDef mat-sort-header> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let row" >
+             <button mat-raised-button color="primary" >Finished</button>
+        </mat-cell>
+      </ng-container>
+    
+
+    <mat-header-row *matHeaderRowDef = "displayedColumns"></mat-header-row>
+    <mat-row *matRowDef = "let rows;columns: displayedColumns"></mat-row>
+</mat-table>
+
+<mat-paginator [pageSize] = "2" [pageSizeOptions] = "[1,2,4,8]"></mat-paginator>

@@ -1,0 +1,142 @@
+ngb-carousel{
+    max-height:700px;
+    width: 1000px;
+    
+
+}
+.carousel-caption{
+    background: #00000090;
+   
+}
+.images-wrapper{
+    position: relative;
+    height: 100%;
+    background-size: cover;
+}
+
+
+
+
+
+
+ng-template{
+    height: 100%;
+    border: 2px solid black;
+}
+
+mat-card{
+    height:150px;
+    width: 200px;
+    border-radius: 39px;
+    border: 5px solid #1012A7;
+    color: #1012A7;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+mat-card:hover{
+    background-color: #1012A780;
+}
+
+mat-grid-list{
+  width:70vw;  
+} 
+
+.grid{
+    width:70vw;
+}
+mat-grid-tile{
+    background: lightblue;
+    
+
+}
+
+.baner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    background-size: cover;
+}
+
+footer{
+    height:350px;
+}
+
+#adria{
+    background: url('../../assets/images/tenis.jpg');
+    background-size: cover;
+}
+#srbija{
+    background: url('../../assets/images/srbtur.jpg');
+    background-size: cover;
+}
+
+#ada{
+    background: url('../../assets/images/25463b5b94d3bb98175037ec0e74accf.jpeg');
+    background-size: cover;
+}
+#bicikl{
+    background: url('../../assets/images/bicikla.jpg');
+    background-size: cover;
+}
+
+#kalis{
+    background: url('../../assets/images/kalis.jpg');
+    background-size: cover;
+}
+
+#uvac{
+    background: url('../../assets/images/uvac.jpg');
+    background-size: cover;
+}
+
+#tara{
+    background: url('../../assets/images/tara.jpg');
+    background-size: cover;
+}
+
+#golubac{
+    background: url('../../assets/images/tara.jpg');
+    background-size: cover;
+}
+#stanisic{
+    background: url('../../assets/images/stanisic.jpg');
+    background-size: cover;
+}
+#vrnjacka{
+    background: url('../../assets/images/vrnjackabanja.jpg');
+    background-size: cover;
+}
+
+#jahanje{
+    background: url('../../assets/images/konjZlatibor.jpg');
+    background-size: cover;
+}
+#olimp{
+    background: url('../../assets/images/olimp.jpg');
+    background-size: cover;
+}
+
+#svirka{
+    background: url('../../assets/images/svirka.jpg');
+    background-size: cover;
+}
+#skadarlija{
+    background: url('../../assets/images/skadarlija.jpg');
+    background-size: cover;
+}
+
+#splavovi{
+    background: url('../../assets/images/splavovi.jpg');
+    background-size: cover;
+}
+
+#savanova{
+    background: url('../../assets/images/savanova.jpg');
+    background-size: cover;
+}
+
+
+    
+    

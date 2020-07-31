@@ -1,0 +1,197 @@
+<section fxLayout="column" fxLayoutGap="50px">
+<section fxLayout="column" fxLayoutAlign="center center" >
+    <h1 style="margin-top: 20px">CHOSE YOUR PERFECT PLACE </h1>
+    <h1>FOR</h1>
+    <h1>RELAXING AND ENJOYING </h1>
+<ngb-carousel>
+    <ng-template ngbSlide>
+        <div class="images-wrapper">
+            <img [src] = "images[0]" alt="">
+        </div>
+        <div class="carousel-caption">
+            <h3>FK PARTIZAN - FK vOJVODINA</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="images-wrapper">
+            <img [src] = "images[1]" alt="">
+        </div>
+        <div class="carousel-caption">
+            <h3>EXIT</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="images-wrapper">
+            <img [src] = "images[2]" alt="">
+        </div>
+        <div class="carousel-caption">
+            <h3>GUCA</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="images-wrapper">
+            <img [src] = "images[3]" alt="">
+        </div>
+        <div class="carousel-caption">
+            <h3>KALEMEGDAN</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+    </ng-template>
+</ngb-carousel>
+</section>
+
+<section fxLayoutAlign="space-around center">
+    <mat-card fxLayoutAlign="space-around center" (click)="showingElement='Sport'">
+        <mat-card-header >
+           Sport
+        </mat-card-header>
+        <mat-icon>directions_bike</mat-icon>
+    </mat-card>
+    
+    <mat-card fxLayoutAlign="space-around center" (click)="showingElement='Nature'">
+        <mat-card-header>
+           Nature
+        </mat-card-header>
+        <mat-icon>landscape</mat-icon>
+    </mat-card>
+   
+    <mat-card fxLayoutAlign="space-around center"  (click)="showingElement='Entertanment'"> 
+        <mat-card-header >
+            Entertanment
+        </mat-card-header>
+        <mat-icon>local_bar</mat-icon>
+    </mat-card>
+
+    <mat-card fxLayoutAlign="space-around center"  (click)="showingElement='Relax'">
+        <mat-card-header>
+            Relax
+        </mat-card-header>
+        <mat-icon>self_improvement</mat-icon>
+    </mat-card>
+</section>
+
+<section fxLayoutAlign="center">  
+    <mat-grid-list [cols]="colSize" rowHeight="350px" gutterSize="10px" *ngIf="showingElement=='Sport'">
+        <mat-grid-tile >
+           <div class="baner" fxFlex fxLayoutAlign="center end" id="adria">         
+            <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Adria Tour</h1>
+           </div>
+        </mat-grid-tile >
+        
+
+        <mat-grid-tile>
+            <div class="baner" fxFlex fxLayoutAlign="center end" id="srbija">         
+                <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Srbija Turska</h1>
+               </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            
+            <div class="baner" fxFlex fxLayoutAlign="center end" id="ada">         
+                <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Ada Aantura</h1>
+               </div>
+            
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            
+            <div class="baner" fxFlex fxLayoutAlign="center end"  id="bicikl">         
+                <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Iznajmi Biciklu Dorcol</h1>
+               </div>
+            
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list [cols]="colSize" rowHeight="350px" gutterSize="10px" *ngIf="showingElement=='Nature'">
+        
+
+            <mat-grid-tile >
+                <div class="baner" fxFlex fxLayoutAlign="center end" id="uvac">         
+                 <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Posetite Uvac</h1>
+                </div>
+             </mat-grid-tile  >
+     
+             <mat-grid-tile>
+                 <div class="baner" fxFlex fxLayoutAlign="center end" id="tara">         
+                     <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Najlepsa Planinataraa</h1>
+                    </div>
+             </mat-grid-tile>
+     
+             <mat-grid-tile>
+                 
+                 <div class="baner" fxFlex fxLayoutAlign="center end" id="kalis">         
+                     <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Setnja kalemegdanom</h1>
+                    </div>
+                 
+             </mat-grid-tile>
+     
+             <mat-grid-tile>
+                 
+                 <div class="baner" fxFlex fxLayoutAlign="center end"  id="golubac">         
+                     <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Tvrdjava Golubac</h1>
+                    </div>
+                 
+             </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list [cols]="colSize" rowHeight="350px" gutterSize="10px"*ngIf="showingElement=='Entertanment'">
+        <mat-grid-tile >
+            <div class="baner" fxFlex fxLayoutAlign="center end" id="splavovi">         
+             <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">The Best Parties</h1>
+            </div>
+        </mat-grid-tile >
+            <mat-grid-tile >
+                <div class="baner" fxFlex fxLayoutAlign="center end" id="savanova">         
+                 <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Prosetajte Promenadom</h1>
+                </div>
+             </mat-grid-tile  >
+     
+             <mat-grid-tile>
+                 <div class="baner" fxFlex fxLayoutAlign="center end" id="svirka">         
+                     <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Najoblje Svirke</h1>
+                    </div>
+             </mat-grid-tile>
+     
+             <mat-grid-tile>
+                 
+                 <div class="baner" fxFlex fxLayoutAlign="center end" id="skadarlija">         
+                     <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Skadalija</h1>
+                    </div>
+                 
+             </mat-grid-tile>
+     
+            
+    </mat-grid-list>
+    <mat-grid-list [cols]="colSize" rowHeight="350px" gutterSize="10px" *ngIf="showingElement=='Relax'">
+        <mat-grid-tile >
+            <div class="baner" fxFlex fxLayoutAlign="center end" id="vrnjacka">         
+             <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Okupajte se u lekovitoj vodi Vrnjacke bane</h1>
+            </div>
+         </mat-grid-tile  >
+ 
+         <mat-grid-tile>
+             <div class="baner" fxFlex fxLayoutAlign="center end" id="stanisic">         
+                 <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Etno selo Stanisic</h1>
+                </div>
+         </mat-grid-tile>
+ 
+         <mat-grid-tile>
+             
+             <div class="baner" fxFlex fxLayoutAlign="center end" id="jahanje">         
+                 <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Naucite da jasete</h1>
+                </div>
+             
+         </mat-grid-tile>
+ 
+         <mat-grid-tile>
+             
+             <div class="baner" fxFlex fxLayoutAlign="center end"  id="olimp">         
+                 <h1 style="color:white;background: #1012A780; width: 100%; height: 40%;text-align: center;padding-top: 20px;;">Olimp najbolji bazeni u gradu</h1>
+                </div>
+             
+         </mat-grid-tile>
+    </mat-grid-list>
+</section>
+
+</section>

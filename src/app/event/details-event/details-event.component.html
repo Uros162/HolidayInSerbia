@@ -1,0 +1,14 @@
+<section >
+    <h1 >{{getName(message)}}</h1>
+    <mat-dialog-content> 
+        <div class="background">
+            <img [src] = "getImage(message)" alt="">
+        </div>
+        {{getDescription(message)}}
+       </mat-dialog-content>
+          <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial color="primary"(click)="ShowToast(getName(message));SignedUpEvent(getName(message))" >sign up</button>
+          </mat-dialog-actions> 
+    
+</section>

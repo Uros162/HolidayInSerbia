@@ -1,0 +1,33 @@
+<section fxLayoutAlign="center center">
+    <form  fxLayout="column" fxLayoutAlign="center left" fxLayoutGap="19px"  #f = "ngForm" (ngSubmit) = "onSubmit(f)"> 
+        <mat-form-field  >
+            <mat-icon style="font-size: 30px;">persone</mat-icon>
+            <input type="email" matInput placeholder="Please enter your email" ngModel name="email" 
+            required email #emailInput = "ngModel">
+            <mat-error *ngIf = "emailInput.hasError('required')">Field should not be empty</mat-error>
+            <mat-error *ngIf = "!emailInput.hasError('required')">Please enter email properly</mat-error>
+        </mat-form-field>
+
+        <mat-form-field hintLabel="please enter minimum 8 characters">
+            <mat-icon style="font-size: 30px;">no_encryption</mat-icon>
+            <input type="password" matInput placeholder="your password" ngModel name="password"
+           required minlength="8" password #passInput="ngModel" >
+            <!--  <mat-hint align="start">entered {{passInput.value?.length}}/8 character</mat-hint> -->
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="choose birth date"  ngModel
+            name="birthDate" [matDatepicker] = "picker" required>
+            <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <button type="submit"mat-raised-button color="primary" [disabled] = "f.invalid">Submit</button>
+        <mat-label *ngIf= "errorExists">{{ errorText }}</mat-label>
+        <a routerLink = "/login">Go back to Login</a> 
+        <mat-checkbox color="primary" ngModel name="acceptance" required style="font-size: 20px;">
+            I accept all terms of <br> conditions of use
+        </mat-checkbox>
+    </form>
+</section>
+ 

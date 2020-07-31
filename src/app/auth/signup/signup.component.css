@@ -1,0 +1,26 @@
+section{
+    height: 90vh;
+}
+
+form{
+    border:5px solid #4D4FFA;
+    border-radius: 20px;
+    width:400px;
+    height: 750px;;
+    padding: 20px;
+    font-size: 30px;;
+    color: #4D4FFA;
+    padding: 40px;
+}
+
+
+button{
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+button:hover{
+    background: white;
+    color: #4D4FFA;
+    
+}
